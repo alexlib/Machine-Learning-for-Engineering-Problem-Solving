@@ -281,11 +281,10 @@ More broadly, Decision Trees are sensitive to small variations in training data.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=6.5in]{../figures/random_forest}
-	\caption{Random forest with majority voting. \protect\footnotemark[1]} 
+	\caption{Random forest with majority voting.} 
 	\label{fig:random_forest}
 \end{figure}
 
-\footnotetext[1]{TseKiChun, CC BY-SA 4.0 $<$https://creativecommons.org/licenses/by-sa/4.0$>$, via Wikimedia Commons}
 
 
 Random Forests reduce the high variance of individual decision trees by building many trees on bootstrap samples of the training data and then averaging their outputs. Each tree is grown with a random subset of input features, so the ensemble decorrelates the trees and improves generalisation. For classification problems the forest predicts the class that receives the majority vote, while for regression it returns the mean of the trees' numeric predictions. This bagging strategy limits overfitting and usually yields better performance than a single tree, although it often falls short of the accuracy achieved by gradient-boosted ensembles. Model quality still depends on the data's size, noise level, and feature interactions, and on hyperparameters such as the number of trees, the maximum depth, and the number of features considered at each split.
