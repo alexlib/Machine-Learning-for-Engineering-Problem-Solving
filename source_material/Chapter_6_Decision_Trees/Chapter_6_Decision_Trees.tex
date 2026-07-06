@@ -205,6 +205,8 @@ The predictions from this model are visualized in Figure~\ref{fig:decision_tree_
 	\label{fig:decision_tree_regression_prediction}
 \end{figure}
 
+\pagebreak
+
 The CART algorithm for regression trees aims to minimize the MSE when splitting the training set, similar to how it minimizes impurity in classification tasks. The cost function minimized by the algorithm is represented as
 
 \begin{equation}
@@ -245,7 +247,7 @@ Similar to classification, Decision Trees for regression can overfit if not prop
 \noindent This example uses Scikit-Learn's \texttt{DecisionTreeRegressor} to fit a non-linear relationship between input and output data. A tree of depth 4 is trained on noisy linear data and visualized using Graphviz to show how the regression model partitions the input space.
 \end{example}
 
-
+\pagebreak
 
 \subsection{Random Forest}
 
@@ -261,6 +263,8 @@ While Decision Trees offer simplicity, interpretability, versatility, and power,
 	\caption{Sensitivity to training set rotation. Decision trees create a single clean split on the original data (left), but after a $45^\circ$  rotation they must build a jagged, multi-step boundary; illustrating their sensitivity to feature orientation.}
 	\label{fig:decision_tree_training_rotation}
 \end{figure}
+
+\pagebreak
 
 More broadly, Decision Trees are sensitive to small variations in training data. For instance, changing the seed of the random number generator can lead to a substantially different model, as shown in Figure~\ref{fig:decision_tree_training_details_1}. This variability is partly due to the stochastic nature of the Scikit-Learn's training algorithms; different models may result from the same data unless the \texttt{random\_state} hyperparameter is fixed.
 
